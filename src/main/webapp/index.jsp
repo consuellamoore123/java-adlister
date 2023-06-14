@@ -9,15 +9,15 @@
 
 <h1>Login</h1>
 
-<form method="post" action="/login.jsp">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
+<%--<form method="post" action="/login.jsp">--%>
+<%--    <label for="username">Username:</label>--%>
+<%--    <input type="text" id="username" name="username" required>--%>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+<%--    <label for="password">Password:</label>--%>
+<%--    <input type="password" id="password" name="password" required>--%>
 
-    <button type="submit">Login</button>
-</form>
+<%--    <button type="submit">Login</button>--%>
+<%--</form>--%>
     <c:if test="true">
         <h1>Variable names should be very descriptive</h1>
     </c:if>
