@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>Guess a Number between 1 and 3</h1>
-<form method="post" action="/guess-servlet">
+<form  action="/guess" method="POST">
     <input type="number" name="guess" min="1" max="3" required>
     <button type="submit">Submit</button>
 </form>

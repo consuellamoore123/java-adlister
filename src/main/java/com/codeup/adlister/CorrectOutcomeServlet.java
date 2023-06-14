@@ -9,13 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/correct")
 public class CorrectOutcomeServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-            request.setAttribute("outcomeMessage", "You Won!");
-            request.getRequestDispatcher("/correct.jsp").forward(request, response);
-        } catch (ServletException e) {
-            // Handle or log the exception as needed
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        request.getRequestDispatcher("/correct.jsp").forward(request,response);
         }
     }
-}
+
 
