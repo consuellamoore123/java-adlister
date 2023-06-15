@@ -13,7 +13,7 @@ public class Quote implements Serializable {
     private static final long serialVersionUID = 1L;
     private int id;
     private String content;
-    private Author author;
+    private String author;
     // Include other properties as per your table structure
 }
 
