@@ -10,7 +10,7 @@ import com.mysql.cj.jdbc.Driver;
 
 
 public class MySQLAdsDao implements Ads {
-    private Connection connection;
+    private final Connection connection;
 
 //    public MySQLAdsDao(Config config) {
 //        try {
@@ -114,7 +114,7 @@ public class MySQLAdsDao implements Ads {
 //    }
 
     @Override
-    public Long insert(Ad ad) {
+    public void insert(Ad ad) {
         try {
             Statement stm = connection.createStatement();
             String insertQuery = String.format("INSERT INTO ads (user_id, title, description) VALUES('%s', '%s', '%s')", ad.getUserId(), ad.getTitle(), ad.getDescription());
@@ -123,7 +123,7 @@ public class MySQLAdsDao implements Ads {
             if (rs.next()) {
                 System.out.println("insert id " + rs.getLong(1));
             }
-            return rs.getLong(1);
+            rs.getLong(1);
         } catch (SQLException e) {
             throw new RuntimeException("Error adding ad");
         }
